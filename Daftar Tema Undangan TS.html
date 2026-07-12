@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="id" translate="no">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daftar Tema Undangan</title>
+
+<!-- Pengaturan Pratinjau Sosial Media (WhatsApp, FB, IG, TikTok) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Daftar Tema Undangan">
+<meta property="og:site_name" content="TRISAND UDT">
+<meta property="og:description" content="Daftar Tema Undangan. Silakan Klik Untuk Membuka Daftar Tema Undangan.">
+
+<!-- Link Website Utama Anda -->
+<meta property="og:url" content="ISI LINK UNDANGAN">
+<link rel="canonical" href="ISI LINK UNDANGAN">
+
+<!-- FORMAT LENGKAP: Menghubungkan langsung ke folder gambar yang sudah Anda upload di GitHub -->
+<meta property="og:image" content="ISI LINK UNDANGANimg/icon-logo/trisand-logo.png">
+<meta property="og:image:secure_url" content="ISI LINK UNDANGANimg/icon-logo/trisand-logo.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Informasi Dasar Google -->
+<meta name="description" content="Daftar Tema Undangan. Silakan Klik Untuk Membuka Daftar Tema Undangan.">
+<meta name="keywords" content="TRISAND Undangan Digital, Semua Undangan Online, Hub No : 628990073730">
+<meta name="robots" content="index, follow">
+
+<!-- Logo Icon Web -->
+<link rel="apple-touch-icon" sizes="180x180" href="img/icon-logo/trisand-logo.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/icon-logo/trisand-logo.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/icon-logo/trisand-logo.png">
+
+    <!-- Link Font Awesome diperbaiki agar ikon mata muncul sempurna -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fb;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Pembungkus luar agar seluruh konten tersusun vertikal di tengah */
+        .wrapper {
+            max-width: 1200px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Pembungkus per kategori agar memberikan jarak antar section yang konsisten */
+        .section-block {
+            width: 100%;
+            margin-bottom: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Desain Judul Kategori Elegan & Modern */
+        .section-title {
+            font-size: 26px;
+            font-weight: 700;
+            color: #073b62;
+            text-transform: uppercase;
+            letter-spacing: 2.5px; /* Jarak antar huruf estetis */
+            margin-bottom: 35px;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Garis aksen emas minimalis di bawah judul */
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #d4af37; /* Warna emas premium */
+            margin: 10px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        /* Wadah utama pembungkus semua kartu */
+        .container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap; /* Otomatis turun ke bawah jika layar HP/kecil */
+            justify-content: center;
+            width: 100%;
+        }
+
+        /* Gaya untuk setiap kotak / kartu */
+        .card {
+            background: #ffffff;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            padding: 15px;
+            width: 210px; /* Lebar standar kartu */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        /* Efek interaktif bayangan & terangkat saat kartu diarahkan kursor */
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Area gambar mockup HP */
+        .card-image {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        /* Gaya teks judul di bawah gambar */
+        .card-title {
+            font-size: 14px; 
+            font-weight: 600;
+            color: #4a5568; 
+            margin-bottom: 15px;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        /* Tombol 'Lihat Tema' (Link <a> berbentuk tombol) */
+        .card-button {
+            width: 100%;
+            background-color: #ffffff;
+            color: #1a202c;
+            border: 1px solid #3182ce; /* Border warna biru */
+            padding: 8px 12px;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px; /* Jarak antara icon mata dan teks */
+            text-decoration: none; /* Menghilangkan garis bawah khas link */
+            transition: all 0.2s ease;
+        }
+
+        /* Efek ketika tombol diarahkan kursor */
+        .card-button:hover {
+            background-color: #ebf8ff;
+            border-color: #2b6cb0;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+
+
+
+
+        <!-- SECTION 1: TEMA PERNIKAHAN SCROLL -->
+        <div class="section-block">
+            <h2 class="section-title">Tema Pernikahan Scroll</h2>     
+
+            <div class="container">
+                <!-- Kartu 1 -->
+                <div class="card">
+                    <img class="card-image" src="img/foto-tema/pernikahan/TEMA Pernikahan Premium 00001.jpg" alt="Tema Scroll">
+                    <div class="card-title">TEMA Pernikahan Premium 00001</div>
+                    <a href="https://trisand-udt.github.io/TEMA-Pernikahan-Premium-00001/" target="_blank" class="card-button">
+                        <i class="fa-regular fa-eye"></i> Lihat Tema
+                    </a>
+                </div>
+
+                <!-- Kartu 2 -->
+                <div class="card">
+                    <img class="card-image" src="img/foto-tema/pernikahan/TEMA Pernikahan Premium 00002.jpg" alt="Tema Scroll">
+                    <div class="card-title">TEMA Pernikahan Premium 00002</div>
+                    <a href="https://trisand-udt.github.io/TEMA-Pernikahan-Premium-00002/" target="_blank" class="card-button">
+                        <i class="fa-regular fa-eye"></i> Lihat Tema
+                    </a>
+                </div>
+
+                <!-- Kartu 3 -->
+                <div class="card">
+                    <img class="card-image" src="img/foto-tema/pernikahan/TEMA Pernikahan Premium 00003.jpg" alt="Tema Scroll">
+                    <div class="card-title">TEMA Pernikahan Premium 00003</div>
+                    <a href="https://trisand-udt.github.io/TEMA-Pernikahan-Premium-00003/" target="_blank" class="card-button">
+                        <i class="fa-regular fa-eye"></i> Lihat Tema
+                    </a>
+                </div>
+
+                <!-- Kartu 4 -->
+                <div class="card">
+                    <img class="card-image" src="img/foto-tema/pernikahan/TEMA Pernikahan Premium 00004.jpg" alt="Tema Scroll">
+                    <div class="card-title">TEMA Pernikahan Premium 00004</div>
+                    <a href="https://trisand-udt.github.io/TEMA-Pernikahan-Premium-00004/" target="_blank" class="card-button">
+                        <i class="fa-regular fa-eye"></i> Lihat Tema
+                    </a>
+                </div>
+
+                <!-- Kartu 5 -->
+                <div class="card">
+                    <img class="card-image" src="img/foto-tema/pernikahan/TEMA Pernikahan Premium 00005.jpg" alt="Tema Scroll">
+                    <div class="card-title">TEMA Pernikahan Premium 00005</div>
+                    <a href="https://trisand-udt.github.io/TEMA-Pernikahan-Premium-00005/" target="_blank" class="card-button">
+                        <i class="fa-regular fa-eye"></i> Lihat Tema
+                    </a>
+                </div>
+
+                <!-- Kartu 6 -->
+                <div class="card">
+                    <img class="card-image" src="img/foto-tema/pernikahan/TEMA Pernikahan Premium 00006.jpg" alt="Tema Scroll">
+                    <div class="card-title">TEMA Pernikahan Premium 00006</div>
+                    <a href="https://trisand-udt.github.io/TEMA-Pernikahan-Premium-00006/" target="_blank" class="card-button">
+                        <i class="fa-regular fa-eye"></i> Lihat Tema
+                    </a>
+                </div>
+
+                <!-- Kartu 7 -->
+                <div class="card">
+                    <img class="card-image" src="img/foto-tema/pernikahan/TEMA Pernikahan Premium 00007.jpg" alt="Tema Scroll">
+                    <div class="card-title">TEMA Pernikahan Premium 00007</div>
+                    <a href="https://trisand-udt.github.io/TEMA-Pernikahan-Premium-00007/" target="_blank" class="card-button">
+                        <i class="fa-regular fa-eye"></i> Lihat Tema
+                    </a>
+                </div>
+
+                <!-- Kartu 8 -->
+                <div class="card">
+                    <img class="card-image" src="img/foto-tema/pernikahan/TEMA Pernikahan Premium 00008.jpg" alt="Tema Scroll">
+                    <div class="card-title">TEMA Pernikahan Premium 00008</div>
+                    <a href="https://trisand-udt.github.io/TEMA-Pernikahan-Premium-00008/" target="_blank" class="card-button">
+                        <i class="fa-regular fa-eye"></i> Lihat Tema
+                    </a>
+                </div>
+
+                <!-- Kartu 9 -->
+                <div class="card">
+                    <img class="card-image" src="img/foto-tema/pernikahan/TEMA Pernikahan Premium 00009.jpg" alt="Tema Scroll">
+                    <div class="card-title">TEMA Pernikahan Premium 00009</div>
+                    <a href="https://trisand-udt.github.io/TEMA-Pernikahan-Premium-00009/" target="_blank" class="card-button">
+                        <i class="fa-regular fa-eye"></i> Lihat Tema
+                    </a>
+                </div>
+
+                <!-- Kartu 10 -->
+                <div class="card">
+                    <img class="card-image" src="img/foto-tema/pernikahan/TEMA Pernikahan Premium 00010.jpg" alt="Tema Scroll">
+                    <div class="card-title">TEMA Pernikahan Premium 00010</div>
+                    <a href="https://trisand-udt.github.io/TEMA-Pernikahan-Premium-00010/" target="_blank" class="card-button">
+                        <i class="fa-regular fa-eye"></i> Lihat Tema
+                    </a>
+                </div>
+
+                <!-- Kartu 11 -->
+                <div class="card">
+                    <img class="card-image" src="img/foto-tema/pernikahan/TEMA Pernikahan Premium 00011.jpg" alt="Tema Scroll">
+                    <div class="card-title">TEMA Pernikahan Premium 00011</div>
+                    <a href="https://trisand-udt.github.io/TEMA-Pernikahan-Premium-00011/" target="_blank" class="card-button">
+                        <i class="fa-regular fa-eye"></i> Lihat Tema
+                    </a>
+                </div>
+
+                <!-- Kartu 12 -->
+                <div class="card">
+                    <img class="card-image" src="img/foto-tema/pernikahan/TEMA Pernikahan Premium 00012.jpg" alt="Tema Scroll">
+                    <div class="card-title">TEMA Pernikahan Premium 00012</div>
+                    <a href="https://trisand-udt.github.io/TEMA-Pernikahan-Premium-00012/" target="_blank" class="card-button">
+                        <i class="fa-regular fa-eye"></i> Lihat Tema
+                    </a>
+                </div>
+
+                <!-- Kartu 13 -->
+                <div class="card">
+                    <img class="card-image" src="img/foto-tema/pernikahan/TEMA Pernikahan Premium 00013.jpg" alt="Tema Scroll">
+                    <div class="card-title">TEMA Pernikahan Premium 00013</div>
+                    <a href="https://trisand-udt.github.io/TEMA-Pernikahan-Premium-00013/" target="_blank" class="card-button">
+                        <i class="fa-regular fa-eye"></i> Lihat Tema
+                    </a>
+                </div>
+
+                <!-- Kartu 14 -->
+                <div class="card">
+                    <img class="card-image" src="img/foto-tema/pernikahan/TEMA Pernikahan Premium 00014.jpg" alt="Tema Scroll">
+                    <div class="card-title">TEMA Pernikahan Premium 00014</div>
+                    <a href="https://trisand-udt.github.io/TEMA-Pernikahan-Premium-00014/" target="_blank" class="card-button">
+                        <i class="fa-regular fa-eye"></i> Lihat Tema
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <!-- SECTION 1: TEMA PERNIKAHAN SLIDE -->
+        <div class="section-block">
+            <h2 class="section-title">Tema Pernikahan Slide</h2>     
+
+            <div class="container">
+                <!-- Kartu Slide 1 -->
+                <div class="card">
+                    <img class="card-image" src="img/foto-tema/pernikahan/TEMA Pernikahan Slide Premium 00001.jpg" alt="Tema Slide">
+                    <div class="card-title">TEMA Pernikahan Slide Premium 00001</div>
+                    <a href="https://trisand-udt.github.io/TEMA-Pernikahan-Slide-Premium-00001/" target="_blank" class="card-button">
+                        <i class="fa-regular fa-eye"></i> Lihat Tema
+                    </a>
+                </div>
+
+                <!-- Kartu Slide 2 -->
+                <div class="card">
+                    <img class="card-image" src="img/foto-tema/pernikahan/TEMA Pernikahan Slide Premium 00002.jpg" alt="Tema Slide">
+                    <div class="card-title">TEMA Pernikahan Slide Premium 00002</div>
+                    <a href="https://trisand-udt.github.io/TEMA-Pernikahan-Slide-Premium-00002/" target="_blank" class="card-button">
+                        <i class="fa-regular fa-eye"></i> Lihat Tema
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+        <!-- SECTION 2: TEMA KHITANAN SCROLL -->
+        <div class="section-block">
+            <h2 class="section-title">Tema Khitanan Scroll</h2>     
+
+            <div class="container">
+                <!-- Kartu 1 -->
+                <div class="card">
+                    <img class="card-image" src="img/foto-tema/khitanan/TEMA Khitanan Premium 00001.jpg" alt="Tema Scroll">
+                    <div class="card-title">TEMA Khitanan Premium 00001</div>
+                    <a href="https://trisand-udt.github.io/TEMA-Khitanan-Premium-00001/" target="_blank" class="card-button">
+                        <i class="fa-regular fa-eye"></i> Lihat Tema
+                    </a>
+                </div>
+
+                <!-- Kartu 2 -->
+                <div class="card">
+                    <img class="card-image" src="img/foto-tema/khitanan/TEMA Khitanan Premium 00002.jpg" alt="Tema Scroll">
+                    <div class="card-title">TEMA Khitanan Premium 00002</div>
+                    <a href="https://trisand-udt.github.io/TEMA-Khitanan-Premium-00002/" target="_blank" class="card-button">
+                        <i class="fa-regular fa-eye"></i> Lihat Tema
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <!-- SECTION 2: TEMA KHITANAN SLIDE -->
+        <div class="section-block">
+            <h2 class="section-title">Tema Khitanan Slide</h2>     
+
+            <div class="container">
+                <!-- Kartu Slide 1 -->
+                <div class="card">
+                    <img class="card-image" src="img/foto-tema/khitanan/TEMA Khitanan Slide Premium 00001.jpg" alt="Tema Slide">
+                    <div class="card-title">TEMA Slide Premium 00001</div>
+                    <a href="https://trisand-udt.github.io/TEMA-Khitanan-Slide-Premium-00001/" target="_blank" class="card-button">
+                        <i class="fa-regular fa-eye"></i> Lihat Tema
+                    </a>
+                </div>
+
+                <!-- Kartu Slide 2 -->
+                <div class="card">
+                    <img class="card-image" src="img/foto-tema/khitanan/TEMA Khitanan Slide Premium 00002.jpg" alt="Tema Slide">
+                    <div class="card-title">TEMA Slide Premium 00002</div>
+                    <a href="https://trisand-udt.github.io/TEMA-Khitanan-Slide-Premium-00002/" target="_blank" class="card-button">
+                        <i class="fa-regular fa-eye"></i> Lihat Tema
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+        <!-- SECTION 3: TEMA AQIQAH SCROLL -->
+        <div class="section-block">
+            <h2 class="section-title">Tema Aqiqah Scroll</h2>     
+
+            <div class="container">
+                <!-- Kartu 1 -->
+                <div class="card">
+                    <img class="card-image" src="img/foto-tema/noimage.jpg" alt="Tema Scroll">
+                    <div class="card-title">TEMA Aqiqah Premium 00001</div>
+                    <a href="ISI LINK UNDANGAN" target="_blank" class="card-button">
+                        <i class="fa-regular fa-eye"></i> Lihat Tema
+                    </a>
+                </div>
+
+                <!-- Kartu 2 -->
+                <div class="card">
+                    <img class="card-image" src="img/foto-tema/noimage.jpg" alt="Tema Scroll">
+                    <div class="card-title">TEMA Aqiqah Premium 00002</div>
+                    <a href="ISI LINK UNDANGAN" target="_blank" class="card-button">
+                        <i class="fa-regular fa-eye"></i> Lihat Tema
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <!-- SECTION 3: TEMA AQIQAH SLIDE -->
+        <div class="section-block">
+            <h2 class="section-title">Tema Aqiqah Slide</h2>     
+
+            <div class="container">
+                <!-- Kartu Slide 1 -->
+                <div class="card">
+                    <img class="card-image" src="img/foto-tema/noimage.jpg" alt="Tema Slide">
+                    <div class="card-title">TEMA Slide Premium 00001</div>
+                    <a href="ISI LINK UNDANGAN" target="_blank" class="card-button">
+                        <i class="fa-regular fa-eye"></i> Lihat Tema
+                    </a>
+                </div>
+
+                <!-- Kartu Slide 2 -->
+                <div class="card">
+                    <img class="card-image" src="img/foto-tema/noimage.jpg" alt="Tema Slide">
+                    <div class="card-title">TEMA Slide Premium 00002</div>
+                    <a href="ISI LINK UNDANGAN" target="_blank" class="card-button">
+                        <i class="fa-regular fa-eye"></i> Lihat Tema
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+<!--==============AWAL-FOOTER================--!>
+<!-- Kontainer luar untuk mengunci iframe selalu di tengah layar saat di-zoom -->
+<div class="ts-iframe-wrapper" style="display: flex; justify-content: center; align-items: center; min-height: auto; width: 100%; box-sizing: border-box; padding: 5px;">
+
+<iframe id="ts-hadiah" srcdoc="
+
+<style>
+        @font-face {
+            font-family: 'GANTINAMAFONT';
+            src: url('filecss/fonts/GANTINAMAFONT.ttf');
+            font-weight: auto;
+        }
+
+        /* Terapkan Secara Paksa Ke Semua Teks */
+
+        * {
+            font-family: 'GANTINAMAFONT', Roboto !important;
+            font-style: auto;
+           }
+
+    /* 1. JUDUL ATAS (Efek Kilau Emas Berlian Mengalir) */
+    .footer-title {
+        font-size: 1rem;       
+        font-weight: 800;        
+        text-align: center;
+        letter-spacing: 2px;
+        margin: 0;
+        text-transform: uppercase; 
+        
+        /* Gradasi Emas Mewah */
+        background: linear-gradient(
+            90deg, 
+            #b5892b 0%, 
+            #fceeac 25%, 
+            #ffffff 50%, 
+            #fceeac 75%, 
+            #b5892b 100%
+        );
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        
+        /* Animasi Mengalir ke Kanan */
+        animation: aliranBerlianFooter 4s linear infinite;
+        
+        filter: drop-shadow(1px 1px 0px #000000)
+                drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.8));
+    }
+
+    /* 2. NAMA BRAND (TRISAND UNDANGAN DIGITAL - Efek Kilau Kristal Cair Keren & Super Tegas) */
+    .footer-brand {
+        font-size: 1.2rem;       /* Ukuran dibuat lebih besar dari teks atasnya */
+        font-weight: 800;        /* Ketebalan huruf maksimal agar efek penuh */
+        text-align: center;
+        letter-spacing: 2px;
+        margin: 8px 0 2px 0;
+        text-transform: uppercase; 
+        
+        /* Gradasi Platinum Chrome & Emas Putih Murni */
+        background: linear-gradient(
+            270deg, 
+            #ffffff 0%, 
+            #fbd38d 25%, 
+            #ffffff 50%, 
+            #ffd700 75%, 
+            #ffffff 100%
+        );
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        
+        /* Animasi Mengalir ke Kiri (Berlawanan arah agar dinamis dan super keren) */
+        animation: aliranBerlianBrand 3.5s linear infinite;
+        
+        /* Efek 3D Bayangan Melingkar Sangat Tajam Agar Bebas Blur */
+        filter: drop-shadow(1px 1px 0px #000000)
+                drop-shadow(2px 2px 0px #000000)
+                drop-shadow(3px 3px 0px #000000)
+                drop-shadow(4px 6px 8px rgba(0, 0, 0, 0.9));
+    }
+
+    /* Animasi Judul Atas (Mengalir Kanan) */
+    @keyframes aliranBerlianFooter {
+        0% { background-position: 0% center; }
+        100% { background-position: 200% center; }
+    }
+
+    /* Animasi Nama Brand (Mengalir Kiri) */
+    @keyframes aliranBerlianBrand {
+        0% { background-position: 200% center; }
+        100% { background-position: 0% center; }
+    }
+
+    /* 3. TEKS PETUNJUK (Kuning Emas Menyala) */
+    .footer-hint {
+        font-size: 1.1rem;
+        color: #ffd700; 
+        font-weight: 800;
+        letter-spacing: 1px;
+        margin: 8px 0 15px 0;
+        text-shadow: 1px 1px 0px #000000, 2px 2px 3px rgba(0,0,0,0.9);
+    }
+
+    /* 4. AREA IKON SOSIAL MEDIA */
+    .footer-icons {
+        display: flex;
+        justify-content: center; /* MEMBUAT IKON TEPAT DI TENGAH */
+        gap: 20px;
+    }
+
+    .footer-icons a {
+        display: inline-block;
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+    }
+
+    .footer-icons img {
+        width: 38px; 
+        height: 38px;
+        object-fit: contain;
+        filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.5));
+        transition: filter 0.3s ease;
+    }
+
+    /* Efek Hover Keren Saat Ikon Disentuh */
+    .footer-icons a:hover {
+        transform: translateY(-8px) scale(1.15); 
+    }
+
+    .footer-icons a:hover img {
+        filter: drop-shadow(0px 0px 12px rgba(212, 175, 55, 0.8)) 
+                drop-shadow(0px 4px 8px rgba(0,0,0,0.6));
+    }
+</style>
+
+<!--====================================================--!>
+
+<footer style='text-align: center;'>
+    <div class='footer-container'>
+        
+        <div>
+            <!-- Teks Atas Ber-Efek Kilau Emas Mengalir -->
+            <p class='footer-title'>Powered & Designed by</p>
+            <!-- Nama Brand Ber-Efek Kilau Berlian Mengalir (Diperbesar & Keren) -->
+            <p class='footer-brand'>TRISAND UNDANGAN DIGITAL</p>
+            <!-- Teks Petunjuk Emas Tajam -->
+            <p class='footer-hint'><em>klik icon untuk hubungi saya</em></p>
+        </div>
+
+        <div class='footer-icons'>
+            <a aria-label='Facebook'>
+                <img src='img/iconfooter/FB.png' alt='Facebook'>
+            </a>
+
+            <a aria-label='Instagram'>
+                <img src='img/iconfooter/IG.png' alt='Instagram'>
+            </a>
+
+            <a href='https://api.whatsapp.com/send/?phone=628990073730&text=Saya+ingin+Bertanya+Detail+Undangan+Digital' target='_blank' aria-label='WhatsApp'>
+                <img src='img/iconfooter/WA.png' alt='WhatsApp'>
+            </a>
+
+            <a aria-label='Youtube'>
+                <img src='img/iconfooter/YT.png' alt='Youtube'>
+            </a>
+        </div>
+
+    </div>
+</footer>
+
+" style="width: 100%; max-width: 100%; height: 160px !important; max-height: 95vh; background: rgba(0, 0, 0, 0.99); border-radius: 20px; border: groove silver 3px; overflow: hidden;"></iframe>
+
+</div>
+<!--==============AKHIR-FOOTER================--!>
+
+
+
+    </div> <!-- Penutup .wrapper -->
+
+
+
+</body>
+</html>
